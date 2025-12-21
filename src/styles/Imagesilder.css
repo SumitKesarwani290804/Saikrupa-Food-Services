@@ -1,0 +1,4 @@
+.slider-img {
+  height: 500px; /* Adjust height */
+  object-fit: cover; /* Maintain aspect ratio */
+}
