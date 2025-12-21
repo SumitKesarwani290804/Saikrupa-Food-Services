@@ -1,4 +1,29 @@
+.slider-wrapper {
+  min-width: 1500px;
+  margin: 80px auto; 
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
 .slider-img {
-  height: 500px; /* Adjust height */
-  object-fit: cover; /* Maintain aspect ratio */
+  height: 520px;
+  object-fit: cover; 
+}
+
+.carousel-indicators button {
+  background-color: #ffb703;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+@media (max-width: 768px) {
+  .slider-wrapper {
+    margin: 60px 16px;
+  }
+  .slider-img {
+    height: 260px;
+  }
 }
