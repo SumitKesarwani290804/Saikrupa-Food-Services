@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import VideoPage from "./components/VideoPage";
-import './App.css';
 import Homepage from './pages/Homepage';
+import MenuSection from './components/Our-menu-section';  
+import './App.css';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path='/' element={< VideoPage />} />
         <Route path='/homepage' element={< Homepage />} />
+        <Route path='/menu' element={< MenuSection />} />
       </Routes>
     </BrowserRouter>
   );

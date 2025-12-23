@@ -1,0 +1,9 @@
+.page-fade {
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.page-fade.fade-out {
+  opacity: 0;
+  transform: scale(1.05);
+}

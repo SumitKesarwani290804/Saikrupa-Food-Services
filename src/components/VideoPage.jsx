@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Video from "../assets/WelcomeVideo.mp4";
+import "../styles/videopage.css";
 
 function VideoPage() {
     const navigate = useNavigate();

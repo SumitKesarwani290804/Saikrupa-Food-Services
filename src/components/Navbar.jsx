@@ -111,7 +111,7 @@ function Navbar() {
               <a className="nav-link custom-link" href="#services">Services</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link custom-link" href="#menu">Menu</a>
+              <a className="nav-link custom-link" href="#menu">Our Menu</a>
             </li>
             <li className="nav-item">
               <a className="nav-link custom-link" href="#contact">Contact</a>
