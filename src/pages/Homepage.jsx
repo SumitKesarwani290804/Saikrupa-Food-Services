@@ -4,6 +4,7 @@ import Imagesilder from "../components/Imagesilder";
 import Googlemap from "../components/googlemap";
 import FooterSection from "../components/footer";
 import MenuCards from "../components/menu-card";
+import CustomerReview from "../components/customer-review";
 
 function Homepage() {
     return (
@@ -11,6 +12,7 @@ function Homepage() {
             <Navbar />
             <Imagesilder />
             <MenuCards />
+            <CustomerReview />
             <Googlemap />
             <FooterSection />
         </>
