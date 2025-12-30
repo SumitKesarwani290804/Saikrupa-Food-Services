@@ -53,8 +53,8 @@ function Navbar() {
             </li>
 
             <li className="nav-item">
-              <a className="nav-link custom-link" href="#contact">
-                Contact
+              <a className="nav-link custom-link" href="/Get-in-Touch">
+                Get in Touch
               </a>
             </li>
 

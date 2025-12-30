@@ -10,18 +10,19 @@ function VideoPage() {
     const handleVideoClick = () => {
         setFade(true);
 
-        
+
         setTimeout(() => {
             navigate("/homepage");
-        }, 500); 
+        }, 500);
     };
 
     return (
         <section
-            className={`position-relative vh-100 overflow-hidden page-fade ${fade ? "fade-out" : ""}`}
+            className={`position-relative overflow-hidden page-fade ${fade ? "fade-out" : ""}`}
+            style={{ height: "100svh", cursor: "pointer" }}
             onClick={handleVideoClick}
-            style={{ cursor: "pointer" }}
         >
+
             <video
                 className="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
                 autoPlay
