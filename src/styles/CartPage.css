@@ -1,0 +1,150 @@
+.cart-page {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.cart-page h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: #333;
+}
+
+.cart-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-3px);
+}
+
+.cart-item img {
+  width: 160px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.cart-info {
+  flex: 1;
+}
+
+.cart-info h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.cart-options {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.cart-qty {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.cart-qty button {
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: #ff9800;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cart-qty span {
+  font-size: 16px;
+  min-width: 25px;
+  text-align: center;
+}
+
+.cart-price {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #2e7d32;
+}
+
+.remove-btn {
+  margin-top: 12px;
+  background: transparent;
+  color: #d32f2f;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  text-decoration: underline;
+}
+
+.cart-total {
+  margin-top: 50px;
+  padding: 25px;
+  background: #fff7e6;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.cart-total h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.checkout-btn {
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #ff9800, #ffb300);
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background: linear-gradient(135deg, #f57c00, #ffa000);
+  transform: scale(1.05);
+}
+
+.cart-empty {
+  text-align: center;
+  padding: 100px 20px;
+  font-size: 22px;
+  color: #777;
+}
+
+
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cart-item img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .cart-qty {
+    justify-content: center;
+  }
+}

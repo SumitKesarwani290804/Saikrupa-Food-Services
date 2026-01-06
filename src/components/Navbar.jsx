@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import logo1 from "../assets/logo.jpeg";
 import "../styles/navbar.css";
 
+
 function Navbar() {
+  const navigate = useNavigate();   
   return (
     <nav className="navbar navbar-expand-lg bg-white fixed-top shadow-sm custom-navbar">
       <div className="container">
@@ -25,7 +28,6 @@ function Navbar() {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-
           <ul className="navbar-nav mx-auto align-items-lg-center gap-lg-5 text-center">
 
             <li className="nav-item">
@@ -35,9 +37,13 @@ function Navbar() {
             </li>
 
             <li className="nav-item">
-              <a className="nav-link custom-link" href="#about">
+              <Link
+                className="nav-link custom-link"
+                to="/About-Page"
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 About
-              </a>
+              </Link>
             </li>
 
             <li className="nav-item">
@@ -53,9 +59,9 @@ function Navbar() {
             </li>
 
             <li className="nav-item">
-              <a className="nav-link custom-link" href="/Get-in-Touch">
+              <Link className="nav-link custom-link" to="/Get-in-Touch">
                 Get in Touch
-              </a>
+              </Link>
             </li>
 
             <li className="nav-item mt-3 mt-lg-0">
@@ -74,8 +80,10 @@ function Navbar() {
             <button className="btn btn-outline-success px-3" type="submit">
               Search
             </button>
+            <button onClick={() => navigate("/cart")}>
+              Cart 🛒
+            </button>
           </form>
-
         </div>
       </div>
     </nav>

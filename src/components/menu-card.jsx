@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/*import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/menu-card.css";
 
@@ -51,7 +51,7 @@ function MenuCards() {
                     </p>
                 </div>
 
-                {/* CATEGORY TABS */}
+                
                 <div className="category-tabs">
                     {categories.map((cat) => (
                         <button
@@ -64,7 +64,7 @@ function MenuCards() {
                     ))}
                 </div>
 
-                {/* MENU ITEMS (LIMITED FOR HOME) */}
+                
                 <div className="menu-items-grid">
                     {menuItems[activeCategory].slice(0, 4).map((item) => (
                         <div key={item.id} className="menu-card">
@@ -94,12 +94,12 @@ function MenuCards() {
                     ))}
                 </div>
 
-                {/* SEE & EXPLORE BUTTON */}
+                
                 <div style={{ textAlign: "center", marginTop: "50px" }}>
                     <button
                         className="order-now-btn"
                         style={{ maxWidth: "280px" }}
-                        onClick={() => navigate("/menu")}
+                        onClick={() => navigate("/full-menu")}
                     >
                         See & Explore Full Menu →
                     </button>
@@ -110,4 +110,86 @@ function MenuCards() {
     );
 }
 
+export default MenuCards;*/
+
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "../styles/menu-card.css";
+import foodData from "../components/Food-Details/FoodData";
+
+function MenuCards() {
+    const [activeCategory, setActiveCategory] = useState("wafer-paav");
+    const navigate = useNavigate();
+
+    const categories = [
+        { id: "wafer-paav", label: "Wafer Paav" },
+        { id: "cheese-wafer", label: "Cheese Wafer Paav" },
+        { id: "pizza", label: "Pizza" },
+        { id: "sandwich", label: "Sandwich" },
+    ];
+
+    // Filter food by active category
+    const filteredItems = foodData.filter(item => item.category === activeCategory);
+
+    return (
+        <section className="menu-cards-section">
+            <div className="container">
+                <div className="menu-cards-header">
+                    <h2 className="menu-cards-title">Our Menu</h2>
+                    <p className="menu-cards-subtitle">Discover our delicious offerings</p>
+                </div>
+
+                {/* CATEGORY TABS */}
+                <div className="category-tabs">
+                    {categories.map(cat => (
+                        <button
+                            key={cat.id}
+                            className={`category-btn ${activeCategory === cat.id ? "active" : ""}`}
+                            onClick={() => setActiveCategory(cat.id)}
+                        >
+                            {cat.label}
+                        </button>
+                    ))}
+                </div>
+
+                {/* MENU ITEMS */}
+                <div className="menu-items-grid">
+                    {filteredItems.slice(0, 4).map(item => (
+                        <div key={item.id} className="menu-card">
+                            <div className="menu-card-image-wrapper">
+                                <img src={item.image} alt={item.name} className="menu-card-image" />
+                            </div>
+                            <div className="menu-card-content">
+                                <h3 className="menu-item-name">{item.name}</h3>
+                                <p className="menu-item-description">{item.description}</p>
+                                <div className="menu-item-footer">
+                                    <span className="menu-item-price">₹{item.price}</span>
+                                </div>
+                                <button
+                                    className="order-now-btn"
+                                    onClick={() => navigate(`/Order-Page/${item.id}`)}
+                                >
+                                    Order Now
+                                </button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* SEE FULL MENU */}
+                <div style={{ textAlign: "center", marginTop: "50px" }}>
+                    <button
+                        className="order-now-btn"
+                        style={{ maxWidth: "280px" }}
+                        onClick={() => navigate("/full-menu")}
+                    >
+                        See & Explore Full Menu →
+                    </button>
+                </div>
+            </div>
+        </section>
+    );
+}
+
 export default MenuCards;
+
