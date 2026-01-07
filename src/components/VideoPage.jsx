@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Video from "../assets/WelcomeVideo.mp4";
 import "../styles/videopage.css";
 //hi comments here 
+// Another comment line
 function VideoPage() {
     const navigate = useNavigate();
     const [fade, setFade] = useState(false);
