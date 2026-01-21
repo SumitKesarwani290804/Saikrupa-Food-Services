@@ -75,15 +75,26 @@ function FullMenuPage() {
 
 export default FullMenuPage;*/
 
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Full-menu-page.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/footer";
 import foodData from "../components/Food-Details/FoodData";
-import { useNavigate } from "react-router-dom";
+import ProductDetailModal from "../components/ProductDetailModal";
 
 function FullMenuPage() {
-    const navigate = useNavigate();
+    const [selectedProduct, setSelectedProduct] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleOrderNow = (product) => {
+        setSelectedProduct(product);
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+        setSelectedProduct(null);
+    };
 
     return (
         <>
@@ -109,7 +120,7 @@ function FullMenuPage() {
                                     <span className="price">₹{item.price}</span>
                                     <button
                                         className="order-btn-now"
-                                        onClick={() => navigate(`/Order-Page/${item.id}`)}
+                                        onClick={() => handleOrderNow(item)}
                                     >
                                         Order Now
                                     </button>
@@ -120,6 +131,13 @@ function FullMenuPage() {
                 </div>
             </section>
             <Footer />
+
+            {/* PRODUCT DETAIL MODAL */}
+            <ProductDetailModal 
+                product={selectedProduct} 
+                isOpen={isModalOpen} 
+                onClose={handleCloseModal}
+            />
         </>
     );
 }
