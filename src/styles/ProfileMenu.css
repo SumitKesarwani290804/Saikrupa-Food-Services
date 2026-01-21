@@ -1,0 +1,380 @@
+.profile-menu-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.login-btn {
+  background: linear-gradient(135deg, #FF8C00 0%, #FFA500 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 140, 0, 0.4);
+}
+
+.profile-btn {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3436;
+  transition: all 0.2s ease;
+}
+
+.profile-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.profile-icon {
+  font-size: 20px;
+}
+
+.profile-name {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  min-width: 280px;
+  z-index: 1050;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+}
+
+.profile-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF8C00 0%, #FFA500 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.profile-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-username {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2d3436;
+  word-break: break-word;
+}
+
+.profile-email {
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  color: #636e72;
+  word-break: break-word;
+}
+
+.profile-divider {
+  height: 1px;
+  background: #eee;
+}
+
+.profile-menu-items {
+  padding: 8px 0;
+}
+
+.profile-menu-item {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  color: #2d3436;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.profile-menu-item:hover {
+  background: #f5f5f5;
+}
+
+.menu-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.menu-text {
+  flex: 1;
+}
+
+.logout-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  color: #e74c3c;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.logout-btn:hover {
+  background: rgba(231, 76, 60, 0.05);
+}
+
+@media (max-width: 768px) {
+  .profile-name {
+    display: none;
+  }
+
+  .profile-btn {
+    padding: 6px 8px;
+  }
+
+  .mobile-profile-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-btn {
+    display: none;
+  }
+
+  .mobile-profile-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 6px;
+    margin-left: 8px;
+    transition: transform 0.2s ease;
+  }
+
+  .mobile-profile-btn:hover {
+    transform: scale(1.15);
+  }
+
+  .profile-dropdown {
+    display: none;
+  }
+
+  .mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1048;
+    animation: fadeIn 0.2s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .mobile-profile-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 20px 20px 0 0;
+    z-index: 1049;
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: slideUpPanel 0.3s ease-out;
+  }
+
+  @keyframes slideUpPanel {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .panel-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #2d3436;
+  }
+
+  .panel-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #636e72;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .panel-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 16px;
+  }
+
+  .avatar-large {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FF8C00 0%, #FFA500 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .panel-name {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d3436;
+    text-align: center;
+  }
+
+  .panel-email {
+    margin: 0;
+    font-size: 13px;
+    color: #636e72;
+    text-align: center;
+  }
+
+  .panel-divider {
+    height: 1px;
+    background: #eee;
+  }
+
+  .panel-menu {
+    padding: 8px 0;
+  }
+
+  .panel-item {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    color: #2d3436;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    text-align: left;
+    border-bottom: 1px solid #f5f5f5;
+  }
+
+  .panel-item:hover {
+    background: #f9f9f9;
+  }
+
+  .item-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .item-text {
+    flex: 1;
+  }
+
+  .panel-logout {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    color: #e74c3c;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    text-align: left;
+  }
+
+  .panel-logout:hover {
+    background: rgba(231, 76, 60, 0.05);
+  }
+}
