@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Our-member.css";
-import Member1 from "../assets/My Image .jpeg"
+import Member1 from "../assets/Rupesh.jpg";
 
 function OurMembers() {
     return (
@@ -22,7 +22,7 @@ function OurMembers() {
                             alt="Member"
                             className="member-img"
                         />
-                        <h5 className="mt-3 mb-1">Rahul Sharma</h5>
+                        <h5 className="mt-3 mb-1">Rupesh</h5>
                         <p className="text-muted mb-1">Founder</p>
                         <p className="small mb-0">📧 rahul@email.com</p>
                         <p className="small">📞 98765 43210</p>

@@ -180,7 +180,7 @@ function MenuCards() {
                                         <span className="menu-item-price">₹{item.price}</span>
                                     </div>
                                     <button
-                                        className="order-now-btn"
+                                        className="order-now-btn-1"
                                         onClick={() => handleOrderNow(item)}
                                     >
                                         Order Now
@@ -193,7 +193,7 @@ function MenuCards() {
                     {/* SEE FULL MENU */}
                     <div style={{ textAlign: "center", marginTop: "50px" }}>
                         <button
-                            className="order-now-btn"
+                            className="order-now-btn-1"
                             style={{ maxWidth: "280px" }}
                             onClick={() => navigate("/full-menu")}
                         >

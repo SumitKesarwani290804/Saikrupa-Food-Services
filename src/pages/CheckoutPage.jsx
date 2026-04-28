@@ -105,7 +105,6 @@ const CheckoutPage = () => {
                     name="fullName"
                     value={deliveryForm.fullName}
                     onChange={handleInputChange}
-                    placeholder="John Doe"
                     disabled={isProcessing}
                   />
                 </div>
@@ -118,7 +117,6 @@ const CheckoutPage = () => {
                       name="email"
                       value={deliveryForm.email}
                       onChange={handleInputChange}
-                      placeholder="john@example.com"
                       disabled={isProcessing}
                     />
                   </div>
@@ -129,7 +127,6 @@ const CheckoutPage = () => {
                       name="phone"
                       value={deliveryForm.phone}
                       onChange={handleInputChange}
-                      placeholder="+91 9876543210"
                       disabled={isProcessing}
                     />
                   </div>
@@ -142,7 +139,6 @@ const CheckoutPage = () => {
                     name="address"
                     value={deliveryForm.address}
                     onChange={handleInputChange}
-                    placeholder="123 Main Street, Apt 4B"
                     disabled={isProcessing}
                   />
                 </div>
@@ -155,7 +151,6 @@ const CheckoutPage = () => {
                       name="city"
                       value={deliveryForm.city}
                       onChange={handleInputChange}
-                      placeholder="New York"
                       disabled={isProcessing}
                     />
                   </div>
@@ -166,7 +161,6 @@ const CheckoutPage = () => {
                       name="postalCode"
                       value={deliveryForm.postalCode}
                       onChange={handleInputChange}
-                      placeholder="10001"
                       disabled={isProcessing}
                     />
                   </div>
@@ -178,7 +172,6 @@ const CheckoutPage = () => {
                     name="instructions"
                     value={deliveryForm.instructions}
                     onChange={handleInputChange}
-                    placeholder="Ring bell twice, gate on left side, etc."
                     rows="3"
                     disabled={isProcessing}
                   />
@@ -269,3 +262,4 @@ const CheckoutPage = () => {
 };
 
 export default CheckoutPage;
+

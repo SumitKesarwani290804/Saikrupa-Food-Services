@@ -122,11 +122,12 @@
   align-items: flex-start;
 }
 
-.contact-icon {
-  font-size: 1.2rem;
-  color: #ce1212;
+/* 🔥 UPDATED ICON SIZE */
+.contact-icon-1 {
+  font-size: 33px;   /* chhota kiya */
+  color: #ffffff;
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 .contact-label {
@@ -294,4 +295,3 @@
     gap: 10px;
   }
 }
-

@@ -1,13 +1,16 @@
 .modal-overlay {
   position: fixed;
-  top: 0;
+  margin-top: 25px;
+  top: 80px;              /* 👈 navbar height ke equal ya thoda kam */
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.6);
+  
   display: flex;
-  align-items: center;
+  align-items: center;   /* vertical center */
   justify-content: center;
+
   z-index: 1000;
   backdrop-filter: blur(4px);
   animation: fadeIn 0.3s ease-out;
@@ -26,18 +29,17 @@
   background: white;
   border-radius: 16px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  max-width: 500px;
+
+  max-width: 500px;   /* 👈 width SAME (change mat karo) */
   width: 95%;
-  min-width: 280px;
-  max-height: 90vh;
-  height: auto;
-  overflow-y: auto;
-  overflow-x: hidden;
+
+  max-height: 80vh;   /* 👈 🔥 height reduce (pehle 90vh tha) */
+  overflow-y: auto;   /* scroll andar hi aayega */
+
   position: relative;
   animation: slideUp 0.3s ease-out;
   display: flex;
   flex-direction: column;
-  padding: 0;
 }
 
 @keyframes slideUp {
@@ -120,7 +122,7 @@
 }
 
 .product-name {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   color: #2d3436;
   margin: 0;
@@ -128,7 +130,7 @@
 }
 
 .product-description {
-  font-size: 15px;
+  font-size: 14px;
   color: #636e72;
   margin: 0;
   line-height: 1.6;
@@ -156,7 +158,7 @@
 }
 
 .base-price {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 700;
   color: #00b894;
 }
@@ -375,4 +377,16 @@
     margin-left: 0;
     margin-top: 4px;
   }
+}
+
+/* smoother center animation */
+.product-detail-modal {
+  transform: scale(0.95);
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+.modal-overlay .product-detail-modal {
+  transform: scale(1);
+  opacity: 1;
 }

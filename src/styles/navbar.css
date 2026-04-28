@@ -41,19 +41,48 @@
   color: #FF8C00 !important;
 }
 
-.order-btn {
-  background: linear-gradient(135deg, #FF8C00 0%, #FFA500 100%) !important;
+.order-now-btn-1 {
+  margin-top: 12px;
+  padding: 14px 40px;
+  background: #ff4d00 !important;
   color: #fff !important;
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
   font-weight: 600;
-  border-radius: 8px;
-  transition: all 0.3s ease !important;
-  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3) !important;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  box-shadow: none !important;   /* 🔥 shadow removed */
 }
 
-.order-btn:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4) !important;
+/* Shine animation */
+.order-now-btn-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transition: left 0.4s ease;
 }
+
+.order-now-btn-1:hover::before {
+  left: 0;
+}
+
+.order-now-btn-1:hover {
+  transform: translateY(-3px) scale(1.03);
+  background: #e64500 !important;
+  box-shadow: none !important; 
+}
+
+.order-now-btn-1:active {
+  transform: scale(0.97);
+}
+
 
 .custom-navbar.navbar-transparent .order-btn {
   background: rgba(255, 255, 255, 0.95) !important;
@@ -86,7 +115,7 @@
   border-color: #ffffff !important;
 }
 
-/* Cart Icon Button */
+
 .cart-icon-btn {
   background: none;
   border: none;
@@ -170,4 +199,28 @@
     display: none;
   }
 }
+
+/* 🔥 Smooth open/close animation */
+.navbar-collapse {
+  transition: all 0.4s ease;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: #ffffff;
+    margin-top: 10px;
+    border-radius: 12px;
+    padding: 20px;
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .navbar-collapse.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
 

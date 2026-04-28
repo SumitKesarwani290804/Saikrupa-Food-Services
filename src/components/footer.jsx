@@ -45,7 +45,7 @@ function FooterSection() {
             <div className="footer-col">
               <h4 className="footer-col-title">Get in Touch</h4>
               <div className="contact-item">
-                <FaMapMarkerAlt className="contact-icon" />
+                <FaMapMarkerAlt className="contact-icon-1" />
                 <div>
                   <p className="contact-label">Address</p>
                   <p className="contact-value">
@@ -55,7 +55,7 @@ function FooterSection() {
                 </div>
               </div>
               <div className="contact-item">
-                <FaPhone className="contact-icon" />
+                <FaPhone className="contact-icon-1" />
                 <div>
                   <p className="contact-label">Phone</p>
                   <p className="contact-value">+91 7208651335</p>
